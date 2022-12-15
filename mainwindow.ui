@@ -13,6 +13,13 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget
+{
+border-image: url(:/new/prefix1/resources/images/background.jpg);
+}
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QSplitter" name="splitter">
     <property name="geometry">
@@ -39,6 +46,9 @@
        <verstretch>1</verstretch>
       </sizepolicy>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="title">
       <string/>
      </property>
@@ -54,6 +64,13 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QProgressBar" name="progressBar">
+         <property name="styleSheet">
+          <string notr="true">font: 700 14pt &quot;Microsoft YaHei UI&quot;;
+color: rgb(0, 0, 0);
+
+border-radius:10px;
+border:2px solid #000000;</string>
+         </property>
          <property name="value">
           <number>24</number>
          </property>
@@ -75,7 +92,8 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="styleSheet">
-          <string notr="true">font: 700 14pt &quot;Microsoft YaHei UI&quot;;</string>
+          <string notr="true">font: 700 14pt &quot;Microsoft YaHei UI&quot;;
+</string>
          </property>
          <property name="text">
           <string>分数：</string>
@@ -85,7 +103,10 @@
        <item>
         <widget class="QLCDNumber" name="lcdNumber">
          <property name="styleSheet">
-          <string notr="true">font: 700 14pt &quot;Microsoft YaHei UI&quot;;
+          <string notr="true">color: rgb(255, 0, 0);
+font: 700 18pt &quot;Microsoft YaHei UI&quot;;
+border-radius:10px;
+border:2px solid #000000;
 </string>
          </property>
         </widget>
@@ -185,6 +206,19 @@
       <height>29</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+</string>
+    </property>
     <property name="text">
      <string>关闭音乐</string>
     </property>
@@ -197,6 +231,18 @@
       <width>93</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+</string>
     </property>
     <property name="text">
      <string>开启音乐</string>
@@ -211,6 +257,17 @@
       <height>29</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}</string>
+    </property>
     <property name="text">
      <string>暂停游戏</string>
     </property>
@@ -223,6 +280,17 @@
       <width>93</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}</string>
     </property>
     <property name="text">
      <string>继续游戏</string>
@@ -237,6 +305,17 @@
       <height>29</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}</string>
+    </property>
     <property name="text">
      <string>重置</string>
     </property>
@@ -250,6 +329,12 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+border-radius:10px;
+border:2px solid #000000;
+}</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="hint">
     <property name="geometry">
@@ -259,6 +344,17 @@
       <width>93</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}</string>
     </property>
     <property name="text">
      <string>提示</string>
@@ -273,6 +369,163 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+border-radius:10px;
+border:2px solid #000000;
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>60</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #FF3030;
+}</string>
+    </property>
+    <property name="text">
+     <string>开始游戏</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>30</y>
+      <width>87</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+border-radius:10px;
+border:2px solid #000000;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>简单</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>普通</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>困难</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="autoSolve">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>450</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}</string>
+    </property>
+    <property name="text">
+     <string>自动解题</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>500</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #FF3030;
+}</string>
+    </property>
+    <property name="text">
+     <string>联机对战</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>540</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #FF3030;
+}</string>
+    </property>
+    <property name="text">
+     <string>新手指导</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>580</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-radius:10px;
+border:2px solid #000000;
+}
+
+QPushButton:hover {
+    background-color: #ecf5ff;
+    color: #FF3030;
+}</string>
+    </property>
+    <property name="text">
+     <string>数据分析</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -284,8 +537,50 @@
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="actionlog"/>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="action_3"/>
+    <addaction name="action_4"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionlog">
+   <property name="text">
+    <string>登录</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>记录查询</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>当前状态</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>版本</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>信息</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

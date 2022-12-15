@@ -148,7 +148,6 @@ private:
 
     clientWidget *client;
 
-    void sendRemains();
 
     Data *data = new Data();
 private slots:
@@ -178,7 +177,6 @@ private slots:
     void on_pushButton_2_clicked();
     //新手指导
     void on_pushButton_3_clicked();
-    //数据分析
     void on_pushButton_4_clicked();
 };
 #endif // MAINWINDOW_H

@@ -345,7 +345,11 @@ void MainWindow::btnsClicked()
 
         //修改进度
         remains -= 2;
-        sendSig();
+        if(remains == 0)
+        {
+           sendSig();
+        }
+
 
         //循环判断，直到重置有解
         if(remains >0)
@@ -1028,47 +1032,39 @@ void MainWindow::on_autoSolve_clicked()
 
 }
 
-void MainWindow::sendRemains()
-{
-     qDebug()<<"???";
-    while(online)
-    {
-        QThread::sleep(3);
-        if(isStarted)
-        {
-                   client->send(remains);
-                   qDebug()<<"??";
-        }
 
-
-    }
-}
 
 //联机对战
 void MainWindow::on_pushButton_2_clicked()
 {
 
+    if(isLogin)
+    {
+        clientWidget *client = new clientWidget();
+        client->set(&remains,m_log->str1);
+        client->show();
+        online = true;
+        connect(this,SIGNAL(remainsChanged()),client,SLOT(on_sendBtn_clicked()));
+    }else
+    {
+        QMessageBox::information(this,"提示","请先登录" ,QMessageBox::Ok | QMessageBox::Cancel,
+                                 QMessageBox::Ok);
+    }
 
-    clientWidget *client = new clientWidget();
-    client->set(&remains);
-    client->show();
-    online = true;
-
-    connect(this,SIGNAL(remainsChanged()),client,SLOT(on_sendBtn_clicked()));
 
 }
 
-
+//新手直到
 void MainWindow::on_pushButton_3_clicked()
 {
     t_log = new greenTeach;
     t_log->show();
 }
 
-
+//数据分析
 void MainWindow::on_pushButton_4_clicked()
 {
-    if(isLogin)
+    if(isLogin && remains != 1)
     {
         vector<int> v1;
         vector<int> v2;
