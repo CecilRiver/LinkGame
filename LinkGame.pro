@@ -10,28 +10,28 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    clientwidget.cpp \
-    data.cpp \
-    dialog.cpp \
-    greenteach.cpp \
-    logwidget.cpp \
-    main.cpp \
-    mainwindow.cpp
+    src/clientwidget.cpp \
+    src/data.cpp \
+    src/dialog.cpp \
+    src/greenteach.cpp \
+    src/logwidget.cpp \
+    src/main.cpp \
+    src/mainwindow.cpp
 
 HEADERS += \
-    clientwidget.h \
-    data.h \
-    dialog.h \
-    greenteach.h \
-    logwidget.h \
-    mainwindow.h
+    src/clientwidget.h \
+    src/data.h \
+    src/dialog.h \
+    src/greenteach.h \
+    src/logwidget.h \
+    src/mainwindow.h
 
 FORMS += \
-    clientwidget.ui \
-    dialog.ui \
-    greenteach.ui \
-    logwidget.ui \
-    mainwindow.ui
+    src/clientwidget.ui \
+    src/dialog.ui \
+    src/greenteach.ui \
+    src/logwidget.ui \
+    src/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

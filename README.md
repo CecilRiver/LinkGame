@@ -21,13 +21,14 @@
 ## 目录结构
 
 ```
-mainwindow.*     主界面与消除逻辑
-clientwidget.*   TCP 联机客户端
-logwidget.*      登录 / 注册
-dialog.*         分数查询与图表
-greenteach.*     新手引导
-data.*           SQLite 数据访问
-resources/       图片与音效
+src/mainwindow.*     主界面与消除逻辑
+src/clientwidget.*   TCP 联机客户端
+src/logwidget.*      登录 / 注册
+src/dialog.*         分数查询与图表
+src/greenteach.*     新手引导
+src/data.*           SQLite 数据访问
+resources/           图片与音效
+resources.qrc        Qt 资源清单
 ```
 
 ## 构建运行
